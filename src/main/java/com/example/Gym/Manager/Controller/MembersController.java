@@ -40,8 +40,18 @@ public class MembersController {
         }
     }
 
+    // @PutMapping("/update/{id}")
+    // public void updateMember(@PathVariable long id, @RequestBody Members member){
+    //     ms.updateMember(id, member);   
+    // }
     @PutMapping("/update/{id}")
-    public void updateMember(@PathVariable long id, @RequestBody Members member){
-        ms.updateMember(id, member);   
-    }
+    public ResponseEntity<String> updateMember(@PathVariable long id, @RequestBody Members member) {
+        boolean isUpdated = (boolean) ms.updateMember(id, member);
+        if (isUpdated) {
+            return ResponseEntity.status(HttpStatus.OK).body("Member updated successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Member not found");
+        }
+}
+
 }

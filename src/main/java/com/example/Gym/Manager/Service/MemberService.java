@@ -31,13 +31,32 @@ public class MemberService {
         
     }
 
-    public void updateMember(long id, Members member){
+    // public boolean updateMember(long id, Members member){
+    //     Members m = mRepo.findById(id).orElse(null);
+    //     if(m != null){
+    //         m.setName(member.getName());
+    //         m.setAge(member.getAge());
+    //         m.setEmail(member.getEmail());
+    //         mRepo.save(m);
+    //     }
+    // }
+    public boolean updateMember(long id, Members member) {
         Members m = mRepo.findById(id).orElse(null);
-        if(m != null){
+        if (m != null) {
+            // Update the necessary fields
             m.setName(member.getName());
             m.setAge(member.getAge());
             m.setEmail(member.getEmail());
+            m.setPhoneno(member.getPhoneno());  // Make sure to include all necessary fields
+            m.setAddress(member.getAddress());
+            m.setPlan(member.getPlan());
+            m.setGymGoal(member.getGymGoal());
+            m.setStatus(member.isStatus());  // Don't forget to update the status as well
+            // Save the updated member
             mRepo.save(m);
+            return true;
         }
+        return false;  // Return false if the member wasn't found
     }
+    
 }
