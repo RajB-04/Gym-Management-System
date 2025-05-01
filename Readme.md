@@ -38,7 +38,7 @@ A sleek, full-stack Gym Management System built using **Spring Boot (Java)** wit
 ## 🚀 Getting Started
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/gym-management-system.git
+git clone https://github.com/Raj-B04/gym-management-system.git
 cd gym-management-system
 
 2️⃣ Run the Application
