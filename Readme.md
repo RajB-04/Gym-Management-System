@@ -50,7 +50,7 @@ Make sure Java 17+ and Maven are installed.
 3️⃣ Open the App
 ## 📸 UI Preview
 
-![Gym App Homepage](assets/homepage.png)
+![Gym App Homepage](https://github.com/RajB-04/Gym-Management-System/assets/homepage.png)
 ![Add member to Gym](assets/addmember.png)
 ![Update details of member](assets/editmember.png)
 ![Delete details of member](assets/deletemember.png)
